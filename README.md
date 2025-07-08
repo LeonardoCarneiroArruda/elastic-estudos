@@ -7,11 +7,11 @@ Testes sobre utilização de index de dados no Elasticsearch, integração com .
 ## Sobre o projeto
 Nesse repositório encontraremos:
 1. docker-compose.yaml que instancia 3 serviços, são eles:
-1.1 elasticsearch - nosso motor de busca e serviço de indexação de dados
-1.2 kibana - para termos visualização e gerenciamento sobre o elasticsearch
-1.3 mysql - banco relacional
+  - elasticsearch - nosso motor de busca e serviço de indexação de dados
+  - kibana - para termos visualização e gerenciamento sobre o elasticsearch
+  - mysql - banco relacional
 2. SampleApi.Elastic, projeto API Rest para testes das métodos de integração entre .NET e Elasticsearch
-2.1 SampleApi.Elastic/Properties - arquivos csv e sql com dados randômicos para inserção no index elastic e tabela mysql
+  - SampleApi.Elastic/Properties - arquivos csv e sql com dados randômicos para inserção no index elastic e tabela mysql
 3. SampleBenchmarkElastic, projeto de console .NET que utiliza biblioteca BenchmarkDotNet para realizar comparações entre métodos de busca de texto realizados no elastic e em tabela mysql 
 
 ## Guia inicial
