@@ -117,7 +117,6 @@ namespace SampleApi.Elastic.Services
             var descriptor = new BulkDescriptor();
 
             descriptor.UpdateMany(records, (idx, obj) => idx.Index(_elasticSettings.DefaultIndex)
-                                                            //.Id(GetIdValue(propertySearch, obj))
                                                             .Doc(obj)
                                                             .DocAsUpsert(true)
                                                             .RetriesOnConflict(3));
