@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SampleApi.Elastic.Data.Context;
-using SampleApi.Elastic.Models;
+using SampleApi.Elastic.Data.Models;
 
 namespace SampleApi.Elastic.Data.Repository
 {

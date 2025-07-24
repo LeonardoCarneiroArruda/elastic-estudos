@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleApi.Elastic.Models;
+using SampleApi.Elastic.Data.Models;
 
 namespace SampleApi.Elastic.Data.Context
 {
@@ -38,9 +38,28 @@ namespace SampleApi.Elastic.Data.Context
                     .HasColumnName("role")
                     .HasMaxLength(50)
                     .IsRequired();
-            }); 
+            });
 
-            
+            modelBuilder.Entity<Movie>(entity =>
+            {
+                entity.ToTable("movie");
+
+                entity.Property(u => u.Id)
+                .HasColumnName("id")
+                .IsRequired();
+
+                entity.Property(u => u.Title)
+                    .HasColumnName("title")
+                    .HasMaxLength(255)
+                    .IsRequired();
+
+                entity.Property(u => u.Sinopse)
+                    .HasColumnName("sinopse")
+                    .HasMaxLength(255)
+                    .IsRequired();
+            });
+
+
         }
     }
 }

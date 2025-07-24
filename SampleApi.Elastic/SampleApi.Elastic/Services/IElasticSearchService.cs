@@ -1,4 +1,4 @@
-﻿using SampleApi.Elastic.Models;
+﻿using SampleApi.Elastic.Data.Models;
 using SampleApi.Elastic.Services.DTO.Response;
 
 namespace SampleApi.Elastic.Services
@@ -20,6 +20,9 @@ namespace SampleApi.Elastic.Services
         Task<UserResponse> SearchUsersAsync(string search);
         Task<UserResponse> SearchDbContextUsersAsync(string search);
 
-        Task ImportCSVToElastic();
+        Task ImportUserCSVToElastic();
+        Task ImportMovieCSVToElastic();
+        Task<List<Movie>> GetAllMovie();
+        Task<MovieResponse> SearchMoviesAsync(string search);
     }
 }

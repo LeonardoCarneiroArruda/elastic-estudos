@@ -25,7 +25,7 @@ var client = new ElasticClient(settings);
 
 builder.Services.AddSingleton<IElasticClient>(client);
 
-await builder.Services.MappignIndexUsersElastic(client, elasticSettings);
+await builder.Services.MappignIndexElastic(client, elasticSettings);
 
 // Registrar o contexto com MySQL
 builder.Services.AddDbContext<SampleElasticContext>(options =>

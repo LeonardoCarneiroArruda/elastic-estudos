@@ -2,9 +2,9 @@
 
 namespace SampleApi.Elastic.Services.DTO.Response
 {
-    public class UserResponse
+    public class MovieResponse
     {
-        public List<User> Data { get; set; }
+        public List<Movie> Data { get; set; }
         public int Total { get; set; }
 
     }

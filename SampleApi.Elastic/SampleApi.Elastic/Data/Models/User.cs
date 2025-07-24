@@ -1,4 +1,4 @@
-﻿namespace SampleApi.Elastic.Models
+﻿namespace SampleApi.Elastic.Data.Models
 {
     public class User
     {

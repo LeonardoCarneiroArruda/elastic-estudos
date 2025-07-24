@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SampleApi.Elastic.Models;
+using SampleApi.Elastic.Data.Models;
 using SampleApi.Elastic.Services;
 
 namespace SampleApi.Elastic.Controllers
@@ -66,9 +66,9 @@ namespace SampleApi.Elastic.Controllers
         }
 
         [HttpPost("importcsv")]
-        public async Task<IActionResult> ImportCSVToElastic()
+        public async Task<IActionResult> ImportUserCSVToElastic()
         {
-            await _elasticsearchService.ImportCSVToElastic();
+            await _elasticsearchService.ImportUserCSVToElastic();
             return Ok();
         }
 
