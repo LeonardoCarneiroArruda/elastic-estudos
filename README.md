@@ -29,11 +29,14 @@ Ainda no mesmo diretório já podemos executar a API para testes, comando:
 ```
 dotnet run 
 ```
-Na inicialização já é criado o index default no elastic, chamado `users`
+Na inicialização já é criado o index default no elastic, chamado `users`, e outro chamado `movie`
 Agora basta acessar o arquivo swagger para testar as rotas. 
 
 #### Importação dos dados
-**Elasticsearch:** Realizando uma requisição no endpoint `POST -> /importcsv` o arquivo `MOCK_DATA.csv` é importado para o index padrão no elastic
+**Elasticsearch:** Realizando uma requisição no endpoint `POST -> /Users/importcsv` o arquivo `MOCK_DATA.csv` é importado para o index padrão no elastic.
+Também contém outro arquivo, `filmes_marvel.csv`, que pode ser importado para elastic, basta realizar uma requisição no endpoint `POST -> /Movie/importcsv`. 
+Nele contém apenas informações de sinopses de filmes para testar a busca de texto através do endpoint `GET -> /Movie/elastic-search`
+
 **Mysql:** Utilizar o arquivo `MOCK_DATA.sql` que possui diversos inserts na tabela `user`
 
 Os 2 arquivos MOCK_DATA possuem os mesmos dados, em formatos diferentes.
